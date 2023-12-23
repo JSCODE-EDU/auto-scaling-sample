@@ -5,11 +5,11 @@ const metadata = require('node-ec2-metadata');
 
 app.get('/', (req, res) => {
   metadata.getMetadataForInstance('instance-id')
-    .then(function(instanceId) {
+    .then((instanceId) => {
       res.send("Instance ID: " + instanceId);
     })
-    .fail(function(error) {
-      console.log("Error: " + error);
+    .fail((error) => {
+      res.send(error)
     });
 })
 
