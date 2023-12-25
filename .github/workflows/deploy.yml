@@ -2,7 +2,7 @@ name: Deploy To EC2
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "github-actions" ]
 
 env:
   CODE_DEPLOY_APP_NAME: code-deploy-app
